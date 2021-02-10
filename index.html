@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8" />
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+        <title>Basic Vue Js - HelloWorld App</title>
+      
+      
+      
+        <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+      
+        <!-- Using via Google Web Fonts -->
+      
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      
+      
+      
+        <!-- https://tailwindcss.com/docs/installation -->
+      
+        <!-- Using Tailwind via CDN -->
+      
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+      
+      
+      
+        <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+      
+        <!-- Vue CDN -->
+      
+        <script src="https://unpkg.com/vue@next"></script>
+        <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet" />
+
+      
+      </head>
+      <body>
+      <div id="app" class="max-w-xl mx-auto my-10 space-y-3">
+          <h1 class="text-xl">PhotoGallery ({{count}})</h1>
+          <ul class="flex flex-col space-y-5 w-7/12 space-between">
+              <li v-for="photo in photos" class="flex  justify-center">
+                  <button v-on:click="photo.done = !photo.done"> <img v-bind:src="photo.img "width="200" height="200" ></button>
+                  <span class="pl-5 pt-20 ">{{photo.title}}</span>
+                  <i v-show="photo.done" class="im im-heart text-red-400"></i>
+                  
+              </li>      
+          </ul>
+      </div>
+
+      
+      
+        <!-- my main.js -->
+      
+        <script src="./main.js"></script>
+      
+      </body>
+</html>
